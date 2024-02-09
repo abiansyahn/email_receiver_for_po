@@ -1,0 +1,6 @@
+{
+	"js/email_receiver_for_po.min.js": [
+		"public/js/purchase_order.js",
+		"public/js/purchase_order_list.js"
+	]
+}

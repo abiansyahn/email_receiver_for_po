@@ -11,7 +11,9 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/email_receiver_for_po/css/email_receiver_for_po.css"
-# app_include_js = "/assets/email_receiver_for_po/js/email_receiver_for_po.js"
+app_include_js = [
+    "/assets/email_receiver_for_po/js/purchase_order.js",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/email_receiver_for_po/css/email_receiver_for_po.css"
@@ -29,7 +31,7 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {"Purchase Order" : "public/js/purchase_order_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -114,15 +116,15 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Communication": "email_receiver_for_po.email_receiver.EmailReceiver",
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+# doc_events = {s
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
@@ -227,3 +229,6 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {"dt": "Custom Field", "filters": [["module", "=", "Email Receiver For Po"]]}
+]
