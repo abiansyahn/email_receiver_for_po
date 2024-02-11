@@ -4,9 +4,7 @@ frappe.listview_settings['Purchase Order'] = {
 	get_indicator: function (doc) {
 		if (doc.status === "Closed") {
 			return [__("Closed"), "green", "status,=,Closed"];
-		} else if (doc.custom_unseen_incoming_email === 1) {
-			return [__("Incoming Email"), "red"];
-        } else if (doc.status === "On Hold") {
+		} else if (doc.status === "On Hold") {
 			return [__("On Hold"), "orange", "status,=,On Hold"];
 		} else if (doc.status === "Delivered") {
 			return [__("Delivered"), "green", "status,=,Closed"];
@@ -49,7 +47,4 @@ frappe.listview_settings['Purchase Order'] = {
 		});
 
 	},
-    refresh: function (listview) {
-        
-    }
 };

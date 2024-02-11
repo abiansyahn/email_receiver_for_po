@@ -13,6 +13,7 @@ app_license = "mit"
 # app_include_css = "/assets/email_receiver_for_po/css/email_receiver_for_po.css"
 app_include_js = [
     "/assets/email_receiver_for_po/js/purchase_order.js",
+    "/assets/email_receiver_for_po/js/list_view.js",
 ]
 
 # include js, css files in header of web template
