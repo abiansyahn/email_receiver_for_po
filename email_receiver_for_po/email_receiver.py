@@ -59,12 +59,19 @@ class EmailReceiver(Communication):
 	def add_attachment_to_po(self):
 		attachments = self.get_attachments()
 		for file in attachments:
-			new_file = frappe.new_doc("File")
-			new_file.file_name = file.file_name
-			new_file.attached_to_doctype = self.reference_doctype
-			new_file.attached_to_name = self.reference_name
-			new_file.is_private = 1
-			new_file.insert(ignore_permissions=True)
+			try:
+				attachment_doc = frappe.get_doc("File", file.name)
+				new_file = frappe.new_doc("File")
+				new_file.file_name = file.file_name
+				new_file.attached_to_doctype = self.reference_doctype
+				new_file.attached_to_name = self.reference_name
+				new_file.is_private = 1
+				new_file.content_hash = attachment_doc.content_hash
+				new_file.file_url = attachment_doc.file_url
+				new_file.folder = attachment_doc.folder
+				new_file.insert(ignore_permissions=True)
+			except:
+				continue
 
 def search_for_po_id(subject):
 	pattern = r'\bB\d{6}\b'
