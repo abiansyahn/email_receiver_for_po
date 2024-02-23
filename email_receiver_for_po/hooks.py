@@ -231,5 +231,6 @@ override_doctype_class = {
 # }
 
 fixtures = [
-    {"dt": "Custom Field", "filters": [["module", "=", "Email Receiver For Po"]]}
+    {"dt": "Custom Field", "filters": [["module", "=", "Email Receiver For Po"]]},
+    {"dt": "Translation", "filters": [["source_text", "in", ["Unread E-Mail", "Mark E-Mail as Unread", "E-Mail Read"]]]}
 ]

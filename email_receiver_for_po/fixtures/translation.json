@@ -1,0 +1,41 @@
+[
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "de",
+  "modified": "2024-02-23 13:11:59.088802",
+  "name": "f96079b131",
+  "source_text": "E-Mail Read",
+  "translated_text": "E-Mail Gelesen"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "de",
+  "modified": "2024-02-23 13:13:27.344001",
+  "name": "b3e1746662",
+  "source_text": "Mark E-Mail as Unread",
+  "translated_text": "E-Mail als Ungelesen Markieren"
+ },
+ {
+  "context": null,
+  "contributed": 0,
+  "contribution_docname": null,
+  "contribution_status": "",
+  "docstatus": 0,
+  "doctype": "Translation",
+  "language": "de",
+  "modified": "2024-02-23 13:13:58.608816",
+  "name": "636220a330",
+  "source_text": "Unread E-Mail",
+  "translated_text": "Ungelesene E-Mail"
+ }
+]
