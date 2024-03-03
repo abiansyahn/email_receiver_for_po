@@ -53,7 +53,8 @@ class EmailReceiver(Communication):
 			self.add_attachment_to_po()
 
 			# mark Purchase Order with Unseen Email
-			purchase_order.custom_unseen_incoming_email = 1
+			if self.sent_or_received == "Received":
+				purchase_order.custom_unseen_incoming_email = 1
 			purchase_order.save(ignore_permissions=True)
 
 	def add_attachment_to_po(self):
